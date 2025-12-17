@@ -1,32 +1,32 @@
 1 лаба
-https://makssuritik.github.io/first/Lab1/SuharevLab01-9.htm
+https://makssuritik.github.io/first/lb1/SuharevLab01-9.htm
 3 лаба
-https://makssuritik.github.io/first/Lab3/SukharevLab02-3.htm 
-https://makssuritik.github.io/first/Lab3/SukharevLab02-4.htm
+https://makssuritik.github.io/first/lb3/SukharevLab02-3.htm 
+https://makssuritik.github.io/first/lb3/SukharevLab02-4.htm
 4 лаба
-https://makssuritik.github.io/first/Lab4/SuharevLab04-2.htm 
-https://makssuritik.github.io/first/Lab4/SuharevLab04-3.htm
+https://makssuritik.github.io/first/lb4/SuharevLab04-2.htm 
+https://makssuritik.github.io/first/lb4/SuharevLab04-3.htm
 5 лаба
-https://makssuritik.github.io/first/Lab5/SuharevLab05-3.htm
+https://makssuritik.github.io/first/lb5/SuharevLab05-3.htm
 6 лаба
-https://makssuritik.github.io/first/Lab6/SuharevLab06-6.htm
-https://makssuritik.github.io/first/Lab6/SuharevLab06-4.htm
-https://makssuritik.github.io/first/Lab6/SuharevLab06-3.htm
+https://makssuritik.github.io/first/lb6/SuharevLab06-6.htm
+https://makssuritik.github.io/first/lb/SuharevLab06-4.htm
+https://makssuritik.github.io/first/lb6/SuharevLab06-3.htm
 7 лаба
-https://makssuritik.github.io/first/Lab7/SuharevLab07-4.htm 
-https://makssuritik.github.io/first/Lab7/SuharevLab07-3.htm 
-https://makssuritik.github.io/first/Lab7/uharevLab07-2.htm
+https://makssuritik.github.io/first/lb7/SuharevLab07-4.htm 
+https://makssuritik.github.io/first/lb7/SuharevLab07-3.htm 
+https://makssuritik.github.io/first/lb7/uharevLab07-2.htm
 8 лаба
-https://makssuritik.github.io/first/Lab8/SuharevLab08-1.htm 
-https://makssuritik.github.io/first/Lab8/SuharevLab08-2.htm 
-https://makssuritik.github.io/first/Lab8/SuharevLab08-3.htm
+https://makssuritik.github.io/first/lb8/SuharevLab08-1.htm 
+https://makssuritik.github.io/first/lb8/SuharevLab08-2.htm 
+https://makssuritik.github.io/first/lb8/SuharevLab08-3.htm
 9 лаба
-https://makssuritik.github.io/first/Lab9/SuharevLab09-1.htm 
-https://makssuritik.github.io/first/Lab9/SuharevLab09-2.htm 
-https://makssuritik.github.io/first/Lab9/SuharevLab09-3.htm
+https://makssuritik.github.io/first/lb9/SuharevLab09-1.htm 
+https://makssuritik.github.io/first/lb9/SuharevLab09-2.htm 
+https://makssuritik.github.io/first/lb9/SuharevLab09-3.htm
 10 лаба
-https://makssuritik.github.io/first/Lab10/SuharevLab10-flex.htm 
-https://makssuritik.github.io/first/Lab10/SuharevLab10-float.htm 
-https://makssuritik.github.io/first/Lab10/SuharevLab10-grid.htm
+https://makssuritik.github.io/first/lb10/SuharevLab10-flex.htm 
+https://makssuritik.github.io/first/lb10/SuharevLab10-float.htm 
+https://makssuritik.github.io/first/lb10/SuharevLab10-grid.htm
 11 лаба
-https://makssuritik.github.io/first/Lab11/SuharevLab11-1.htm
+https://makssuritik.github.io/first/lb11/SuharevLab11-1.htm
