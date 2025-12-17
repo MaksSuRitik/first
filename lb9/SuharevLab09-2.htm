@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE>Вільні класи стилів</TITLE>
+<meta charset="UTF-8">
+<STYLE TYPE="text/css">
+    /* Клас для назви розділу (жирний, великий) */
+    .section_title {
+        font-family: Tahoma;
+        font-size: 18pt;
+        font-weight: bold;
+        color: #4B0082;
+        background-color: #E6E6FA;
+        padding: 10px;
+    }
+
+    /* Клас для основного тексту (вирівнювання по ширині) */
+    .main_text {
+        font-family: Arial;
+        font-size: 14pt;
+        color: #333333;
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    /* Клас для виносок/приміток (дрібний сірий шрифт) */
+    .note {
+        font-family: Courier;
+        font-size: 10pt;
+        color: #696969;
+        font-style: italic;
+        border: 1px dashed #696969;
+        padding: 5px;
+        display: block; /* Робить елемент блочним */
+        margin-top: 10px;
+    }
+</STYLE>
+</HEAD>
+<BODY>
+
+<DIV CLASS="section_title">Поняття ядра (Kernel)</DIV>
+
+<P CLASS="main_text">
+Ядро операційної системи — це центральна частина операційної системи, що забезпечує програмам координований доступ до ресурсів комп'ютера, таких як процесорний час, пам'ять та зовнішнє апаратне забезпечення.
+</P>
+
+<SPAN CLASS="note">Примітка: Інформацію взято з вільної енциклопедії Вікіпедія.</SPAN>
+<BR><BR>
+
+<DIV CLASS="section_title">Монолітне ядро</DIV>
+
+<P CLASS="main_text">
+Монолітні ядра надають багатий набір абстракцій обладнання. Усі драйвери та системні служби працюють у просторі ядра, що забезпечує високу швидкодію.
+</P>
+
+<DIV CLASS="note">Примітка: Linux є класичним прикладом монолітного ядра з можливістю завантаження модулів.</DIV>
+
+</BODY>
+</HTML>

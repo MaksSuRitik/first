@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>Замовлення на товар</TITLE>
+<meta charset="UTF-8">
+</HEAD>
+<BODY BGCOLOR="#FFFFE0">
+
+<H2 ALIGN="CENTER">Форма замовлення товару</H2>
+
+<FORM ACTION="#" METHOD="POST">
+<TABLE BORDER="0" CELLPADDING="5" ALIGN="CENTER">
+    <TR>
+        <TD>Номер банківського рахунку:</TD>
+        <TD><INPUT TYPE="text" NAME="bank_account" SIZE="30"></TD>
+    </TR>
+    <TR>
+        <TD>Особистий номер користувача:</TD>
+        <TD><INPUT TYPE="text" NAME="user_id" SIZE="30"></TD>
+    </TR>
+    <TR>
+        <TD VALIGN="TOP">Оберіть товари (можна декілька):<BR><I>(Затисніть Ctrl для вибору кількох)</I></TD>
+        <TD>
+            <SELECT NAME="goods" SIZE="5" MULTIPLE>
+                <OPTION VALUE="laptop">Ноутбук Lenovo</OPTION>
+                <OPTION VALUE="mouse">Мишка Logitech</OPTION>
+                <OPTION VALUE="keyboard">Клавіатура механічна</OPTION>
+                <OPTION VALUE="monitor">Монітор Dell 24"</OPTION>
+                <OPTION VALUE="ssd">SSD диск Samsung 1TB</OPTION>
+                <OPTION VALUE="ram">Оперативна пам'ять 16GB</OPTION>
+            </SELECT>
+        </TD>
+    </TR>
+    <TR>
+        <TD VALIGN="TOP">Ваші коментарі:</TD>
+        <TD><TEXTAREA NAME="comments" ROWS="4" COLS="30"></TEXTAREA></TD>
+    </TR>
+    <TR>
+        <TD>Вид оплати:</TD>
+        <TD>
+            <INPUT TYPE="radio" NAME="payment" VALUE="cash" CHECKED> Готівковий<BR>
+            <INPUT TYPE="radio" NAME="payment" VALUE="cashless"> Безготівковий
+        </TD>
+    </TR>
+    <TR>
+        <TD VALIGN="TOP">Надіслати додаткову інформацію:</TD>
+        <TD>
+            <INPUT TYPE="checkbox" NAME="info_balance" VALUE="yes"> Дані про залишки на рахунку<BR>
+            <INPUT TYPE="checkbox" NAME="info_history" VALUE="yes"> Список останніх виплат
+        </TD>
+    </TR>
+    <TR>
+        <TD COLSPAN="2" ALIGN="CENTER">
+            <BR>
+            <INPUT TYPE="submit" VALUE="Оформити замовлення">
+            <INPUT TYPE="reset" VALUE="Очистити форму">
+        </TD>
+    </TR>
+</TABLE>
+</FORM>
+
+</BODY>
+</HTML>

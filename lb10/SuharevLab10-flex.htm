@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 10 - Flexbox Layout (No Text)</title>
+    <style>
+        body { margin: 0; padding: 10px; font-family: Arial, sans-serif; }
+        
+        .wrapper {
+            display: flex;
+            flex-direction: column; /* Вертикально для мобілок */
+            gap: 3px;
+        }
+
+        .block {
+            /* border: 1px solid white;  <-- Можна розкоментувати, якщо потрібна рамка */
+            display: flex;
+            min-height: 100px; /* Мінімальна висота, щоб блок не зник без тексту */
+        }
+
+        /* Кольори */
+        .blue { background-color: #5D9CEC; }
+        .grey { background-color: #656D78; }
+        .teal { background-color: #4FC1E9; }
+        .red { background-color: #ED5565; }
+        .yellow { background-color: #FFCE54; }
+        .green { background-color: #48CFAD; }
+        .orange { background-color: #FC6E51; }
+
+        /* Tablet & Desktop (>= 500px) */
+        @media (min-width: 500px) {
+            .wrapper {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            /* Головний контент зліва */
+            .main-content {
+                display: flex;
+                flex-direction: column;
+                flex: 3;
+                gap: 3px;
+            }
+
+            /* Сайдбар справа */
+            .grey {
+                flex: 1;
+                min-height: 500px; 
+            }
+
+            /* Footer на всю ширину */
+            .orange {
+                width: 100%;
+                order: 10;
+            }
+
+            /* Середня секція */
+            .middle-section {
+                display: flex;
+                flex: 1;
+                gap: 3px;
+            }
+
+            .left-group {
+                display: flex;
+                flex-direction: column;
+                flex: 2;
+                gap: 3px;
+            }
+
+            .top-row {
+                display: flex;
+                gap: 3px;
+            }
+            
+            .teal, .red { flex: 1; }
+            .green { flex: 1; }
+            
+            .yellow {
+                flex: 1;
+            }
+        }
+        
+        @media (min-width: 750px) { .wrapper { max-width: 750px; margin: 0 auto; } }
+        @media (min-width: 950px) { .wrapper { max-width: 950px; } }
+        @media (min-width: 1200px) { .wrapper { max-width: 100%; } }
+
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="main-content">
+        <div class="block blue"></div>
+        
+        <div class="middle-section">
+            <div class="left-group">
+                <div class="top-row">
+                    <div class="block teal"></div>
+                    <div class="block red"></div>
+                </div>
+                <div class="block green"></div>
+            </div>
+            <div class="block yellow"></div>
+        </div>
+    </div>
+
+    <div class="block grey"></div>
+
+    <div class="block orange"></div>
+</div>
+
+</body>
+</html>

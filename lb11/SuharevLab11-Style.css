@@ -1,0 +1,43 @@
+body {
+    background-image: url('background.jpg');
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #000080;
+    font-style: normal;
+}
+
+p {
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-indent: 30px;
+    font-style: italic;
+}
+
+a:link {
+    color: green;
+    text-decoration: none;
+}
+
+a:visited {
+    color: DarkBlue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: Red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+img {
+    float: left;
+    margin-right: 10px;
+}

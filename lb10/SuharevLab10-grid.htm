@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 10 - Grid Layout (No Text)</title>
+    <style>
+        body { margin: 0; padding: 10px; font-family: Arial, sans-serif; }
+
+        .container {
+            display: grid;
+            gap: 3px;
+            /* Мобільна версія: 1 колонка */
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "header"
+                "sidebar"
+                "teal"
+                "red"
+                "yellow"
+                "green"
+                "footer";
+        }
+
+        .block {
+            /* border: 1px solid white; <-- Можна розкоментувати, якщо потрібна рамка */
+            min-height: 100px; /* Щоб блоки мали висоту без тексту */
+        }
+
+        /* Прив'язка блоків до областей Grid */
+        .blue { grid-area: header; background-color: #5D9CEC; }
+        .grey { grid-area: sidebar; background-color: #656D78; }
+        .teal { grid-area: teal; background-color: #4FC1E9; }
+        .red { grid-area: red; background-color: #ED5565; }
+        .yellow { grid-area: yellow; background-color: #FFCE54; }
+        .green { grid-area: green; background-color: #48CFAD; }
+        .orange { grid-area: footer; background-color: #FC6E51; }
+
+        /* Адаптивність */
+
+        /* >= 500px */
+        @media (min-width: 500px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                    "header header"
+                    "sidebar sidebar"
+                    "teal red"
+                    "yellow yellow"
+                    "green green"
+                    "footer footer";
+            }
+        }
+
+        /* >= 750px */
+        @media (min-width: 750px) {
+            .container {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 
+                    "header header sidebar"
+                    "teal red sidebar"
+                    "yellow yellow sidebar"
+                    "green green sidebar"
+                    "footer footer footer";
+            }
+        }
+
+        /* >= 1200px */
+        @media (min-width: 1200px) {
+            .container {
+                /* 4 колонки */
+                grid-template-columns: 1fr 1fr 1.5fr 1fr;
+                grid-template-rows: 150px 150px 200px 80px;
+                grid-template-areas: 
+                    "header header header sidebar"
+                    "teal   red    yellow sidebar"
+                    "green  green  yellow sidebar"
+                    "footer footer footer footer";
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="block blue"></div>
+    <div class="block grey"></div>
+    <div class="block teal"></div>
+    <div class="block red"></div>
+    <div class="block yellow"></div>
+    <div class="block green"></div>
+    <div class="block orange"></div>
+</div>
+
+</body>
+</html>
