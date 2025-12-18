@@ -4,18 +4,55 @@
     <meta charset="UTF-8">
     <title>Головна сторінка (Lab 10 + 12)</title>
     <style>
-        body { margin: 0; padding: 10px; font-family: Arial, sans-serif; }
-        
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Щоб футер був знизу */
+        }
+
+        /* Шапка */
+        header {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #d32f2f;
+            margin-bottom: 20px;
+        }
+        .header-left h1 { margin: 0; font-size: 22px; font-weight: bold; }
+        .header-left span { font-size: 14px; opacity: 0.9; }
+        .header-right a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; margin-left: 15px; }
+
+        /* Футер */
+        footer {
+            background-color: #263238;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            margin-top: auto;
+        }
+
         .wrapper {
             display: flex;
             flex-direction: column;
             gap: 3px;
+            padding: 0 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
         }
 
         .block {
             display: flex;
             min-height: 100px;
-          
             padding: 15px;
             box-sizing: border-box; 
         }
@@ -29,110 +66,91 @@
         .green { background-color: #48CFAD; }
         .orange { background-color: #FC6E51; }
 
-        /* Стилі для посилань 
         .menu-link {
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             text-decoration: none;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: bold;
-            background: rgba(0,0,0,0.1); /* Легке затемнення фону посилання */
-            padding: 5px 10px;
-            border-radius: 5px;
-            width: fit-content; /* Ширина по тексту */
+            background: rgba(0,0,0,0.1);
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            transition: 0.3s;
         }
-        .menu-link:hover {
-            background: rgba(0,0,0,0.3);
-            color: #FFFFE0;
-        }
-        h2 { color: white; margin-top: 0; }
 
-        /* Tablet & Desktop (>= 500px) */
+        
+        .blue h2 { 
+            color: white; 
+            margin-top: 0; 
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+
         @media (min-width: 500px) {
-            .wrapper {
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-            
-            /* Головний контент зліва */
-            .main-content {
-                display: flex;
-                flex-direction: column;
-                flex: 3;
-                gap: 3px;
-            }
-
-            /* Сайдбар справа */
-            .grey {
-                flex: 1;
-                min-height: 500px; 
-            }
-
-            /* Footer на всю ширину */
-            .orange {
-                width: 100%;
-                order: 10;
-            }
-
-            /* Середня секція */
-            .middle-section {
-                display: flex;
-                flex: 1;
-                gap: 3px;
-            }
-
-            .left-group {
-                display: flex;
-                flex-direction: column;
-                flex: 2;
-                gap: 3px;
-            }
-
-            .top-row {
-                display: flex;
-                gap: 3px;
-            }
-            
+            .wrapper { flex-direction: row; flex-wrap: wrap; }
+            .main-content { display: flex; flex-direction: column; flex: 3; gap: 3px; }
+            .grey { flex: 1; min-height: 500px; }
+            .orange { width: 100%; order: 10; }
+            .middle-section { display: flex; flex: 1; gap: 3px; }
+            .left-group { display: flex; flex-direction: column; flex: 2; gap: 3px; }
+            .top-row { display: flex; gap: 3px; }
             .teal, .red { flex: 1; }
             .green { flex: 1; }
-            
-            .yellow {
-                flex: 1;
-            }
+            .yellow { flex: 1; }
         }
         
         @media (min-width: 750px) { .wrapper { max-width: 750px; margin: 0 auto; } }
         @media (min-width: 950px) { .wrapper { max-width: 950px; } }
-        @media (min-width: 1200px) { .wrapper { max-width: 100%; } }
+        @media (min-width: 1200px) { .wrapper { max-width: 1200px; } }
 
     </style>
 </head>
 <body>
 
-<div class="wrapper">
-    <div class="main-content">
-        <div class="block blue">
-            <h2>Лабораторна робота №12</h2>
-              <a href="register.html" class="menu-link"> Реєстрація</a>
-              <a href="git_commands.html" class="menu-link"> Команди Git</a>
+    <header>
+        <div class="header-left">
+            <h1>Мій особистий блог</h1>
+            <span>Сухарєв Максим</span>
         </div>
-        
-        <div class="middle-section">
-            <div class="left-group">
-                <div class="top-row">
-                    <div class="block teal"></div>
-                    <div class="block red"></div>
-                </div>
-                <div class="block green"></div>
+        <div class="header-right">
+            <a href="register.html">Вхід</a>
+            <a href="register.html">Реєстрація</a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="main-content">
+            <div class="block blue">
+                <h2>Лабораторна робота 12</h2>
+                
+                <a href="register.html" class="menu-link">Реєстрація</a>
+                <a href="git_commands.html" class="menu-link">Команди Git</a>
+                
             </div>
-            <div class="block yellow"></div>
+            
+            <div class="middle-section">
+                <div class="left-group">
+                    <div class="top-row">
+                        <div class="block teal"></div>
+                        <div class="block red"></div>
+                    </div>
+                    <div class="block green"></div>
+                </div>
+                <div class="block yellow"></div>
+            </div>
+        </div>
+
+        <div class="block grey">
+
+        </div>
+
+        <div class="block orange">
+
         </div>
     </div>
 
-    <div class="block grey"></div>
-
-    <div class="block orange"></div>
-</div>
 
 </body>
 </html>

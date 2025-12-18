@@ -2,54 +2,208 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Git Commands</title>
+    <title>Команди Git</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; font-weight: bold; }
-        .command-group { margin-bottom: 30px; }
+        /* стилі (Ті самі, що й в register.html) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Шапка */
+        header {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #d32f2f;
+        }
+        .header-left h1 { margin: 0; font-size: 22px; font-weight: bold; }
+        .header-left span { font-size: 14px; opacity: 0.9; }
+        .header-right a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; margin-left: 15px; }
+
+
+        footer {
+            background-color: #263238;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            margin-top: auto; /* Притискає футер до низу */
+        }
+
+        /*  СТИЛІ (GRID) */
+        .container {
+            padding: 20px;
+            max-width: 1400px; /* Широка сторінка, щоб вмістити 4 колонки */
+            margin: 0 auto;
+        }
+
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 рівні колонки */
+            gap: 20px;
+            align-items: start;
+        }
+
+        /* Стилі тексту в колонках */
+        h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+        
+        p {
+            color: #555;
+            font-size: 13px;
+            margin-bottom: 3px;
+            margin-top: 15px;
+        }
+
+        .command {
+            font-family: "Courier New", monospace;
+            font-weight: bold;
+            color: #000;
+            font-size: 14px;
+        }
+
+        /* Кольори заголовків (як на скріншоті) */
+        .col-1 h2 { color: #5D9CEC; } /* Блакитний */
+        .col-2 h2 { color: #8CC152; } /* Салатовий */
+        .col-3 h2 { color: #8D6E63; } /* Коричнево-оливковий */
+        .col-4 h2 { color: #FF5722; } /* Помаранчевий */
+
+        .col-header-secondary {
+            color: #4A89DC; 
+            font-size: 18px; 
+            font-weight: bold; 
+            margin-top: 25px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Адаптивність для мобільних (якщо екран малий - ставимо в 1 колонку) */
+        @media (max-width: 900px) {
+            .grid-wrapper { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .grid-wrapper { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
-    <h1 align="center">Основні команди Git</h1>
-        <div class="command-group">
-        <h2>Create a Repository</h2>
-        <p>Створити новий репозиторій:</p>
-        <pre>$ git init</pre>
-        <p>Клонувати існуючий репозиторій:</p>
-        <pre>$ git clone my_url</pre>
-    </div>
-        <div class="command-group">
-        <h2>Observe your Repository</h2>
-        <p>Статус файлів:</p>
-        <pre>$ git status</pre>
-        <p>Зміни у файлах (ще не додані):</p>
-        <pre>$ git diff</pre>
-        <p>Історія змін:</p>
-        <pre>$ git log</pre>
-    </div>
-        <div class="command-group">
-        <h2>Working with Branches</h2>
-        <p>Список гілок:</p>
-        <pre>$ git branch</pre>
-        <p>Створити нову гілку:</p>
-        <pre>$ git branch new_branch</pre>
-        <p>Перейти на іншу гілку:</p>
-        <pre>$ git checkout my_branch</pre>
-        <p>Об'єднати гілки:</p>
-        <pre>$ git merge branch_name</pre>
-    </div>
-        <div class="command-group">
-        <h2>Synchronize & Changes</h2>
-        <p>Додати файли до індексу:</p>
-        <pre>$ git add .</pre>
-        <p>Зробити коміт:</p>
-        <pre>$ git commit -m "message"</pre>
-        <p>Завантажити зміни з сервера:</p>
-        <pre>$ git pull</pre>
-        <p>Відправити зміни на сервер:</p>
-        <pre>$ git push</pre>
+
+    <header>
+        <div class="header-left">
+            <h1>Мій особистий блог</h1>
+            <span>Сухарєв Максим</span>
+        </div>
+        <div class="header-right">
+            <a href="register.html">Вхід</a>
+            <a href="register.html">Реєстрація</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid-wrapper">
+            
+            <div class="column col-1">
+                <h2>Create a Repository</h2>
+                
+                <p>From scratch -- Create a new local repository</p>
+                <div class="command">$ git init [project name]</div>
+
+                <p>Download from an existing repository</p>
+                <div class="command">$ git clone my_url</div>
+
+                <span class="col-header-secondary">Observe your Repository</span>
+
+                <p>List new or modified files not yet committed</p>
+                <div class="command">$ git status</div>
+
+                <p>Show the changes to files not yet staged</p>
+                <div class="command">$ git diff</div>
+                
+                <p>Show full change history</p>
+                <div class="command">$ git log</div>
+            </div>
+
+            <div class="column col-2">
+                <h2>Working with Branches</h2>
+
+                <p>List all local branches</p>
+                <div class="command">$ git branch</div>
+
+                <p>List all branches, local and remote</p>
+                <div class="command">$ git branch -av</div>
+
+                <p>Switch to a branch, my_branch, and update working directory</p>
+                <div class="command">$ git checkout my_branch</div>
+
+                <p>Create a new branch called new_branch</p>
+                <div class="command">$ git branch new_branch</div>
+
+                <p>Delete the branch called my_branch</p>
+                <div class="command">$ git branch -d my_branch</div>
+
+                <p>Merge branch_a into branch_b</p>
+                <div class="command">$ git checkout branch_b</div>
+                <div class="command">$ git merge branch_a</div>
+            </div>
+
+            <div class="column col-3">
+                <h2>Make a change</h2>
+
+                <p>Stages the file, ready for commit</p>
+                <div class="command">$ git add [file]</div>
+
+                <p>Stage all changed files, ready for commit</p>
+                <div class="command">$ git add .</div>
+
+                <p>Commit all staged files to versioned history</p>
+                <div class="command">$ git commit -m "commit message"</div>
+
+                <p>Unstages file, keeping the file changes</p>
+                <div class="command">$ git reset [file]</div>
+
+                <p>Revert everything to the last commit</p>
+                <div class="command">$ git reset --hard</div>
+            </div>
+
+            <div class="column col-4">
+                <h2>Synchronize</h2>
+
+                <p>Get the latest changes from origin (no merge)</p>
+                <div class="command">$ git fetch</div>
+
+                <p>Fetch the latest changes from origin and merge</p>
+                <div class="command">$ git pull</div>
+
+                <p>Push local changes to the origin</p>
+                <div class="command">$ git push</div>
+
+                <span class="col-header-secondary" style="color: #D84315;">Finally!</span>
+                
+                <p>When in doubt, use git help</p>
+                <div class="command">$ git command --help</div>
+                
+                
+            </div>
+
+        </div>
     </div>
 
-    </body>
+    <footer>
+        &copy; Всі права захищені.<br>
+        Розробник: студент групи 302-ТН Сухарєв Максим
+    </footer>
+
+</body>
 </html>

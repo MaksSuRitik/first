@@ -3,36 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <title>Реєстрація</title>
+    <style>
+        /* Основні стилі сторінки */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Синя шапка (Header) */
+        header {
+            background-color: #2196F3; /* Яскраво-синій */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #d32f2f; /* Червона смужка знизу, як на скріні */
+        }
+        .header-left h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .header-left span {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .header-right a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            margin-left: 15px;
+        }
+
+        /* Контейнер для центрування */
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Центрує по вертикалі */
+            padding: 40px 0;
+        }
+
+        /*  реєстрація */
+        .register-card {
+            background: white;
+            width: 400px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Заголовок картки */
+        .card-header {
+            background-color: #64B5F6; /* Світло-синій */
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Тіло форми */
+        .card-body {
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Поля вводу */
+        input[type="text"], 
+        input[type="password"], 
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box; /* Щоб padding не розширював поле */
+            background-color: #f9f9f9;
+        }
+
+        /* Кнопка */
+        button {
+            float: right;
+            padding: 8px 15px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+        }
+        button:hover {
+            background-color: #ddd;
+        }
+
+        footer {
+            background-color: #263238; /* Темно-сірий */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
+
+    <header>
+        <div class="header-left">
+            <h1>Мій особистий блог</h1>
+            <span>Сухарєв Максим</span> 
+        </div>
+        <div class="header-right">
+            <a href="#">Вхід</a>
+            <a href="#">Реєстрація</a>
+        </div>
+    </header>
+
     <div class="container">
-        <h2>Реєстрація користувача</h2>
-        
-        <form action="#">
-            
-            <label>Прізвище:</label><br>
-            <input type="text" name="surname" placeholder="Введіть прізвище"><br><br>
+        <div class="register-card">
+            <div class="card-header">
+                Реєстрація користувача
+            </div>
+            <div class="card-body">
+                <form action="#">
+                    <label>Прізвище</label>
+                    <input type="text" name="surname">
 
-            <label>Ім'я:</label><br>
-            <input type="text" name="name" placeholder="Введіть Ім'я"><br><br>
+                    <label>Ім'я</label>
+                    <input type="text" name="name">
 
-            <label>Логін:</label><br>
-            <input type="text" name="login" placeholder="Введіть логін"><br><br>
+                    <label>Логін</label>
+                    <input type="text" name="login">
 
-            <label>Навчальна група:</label><br>
-            <select name="group">
-                <option value="302-TN">302-ТН</option>
-                <option value="301-TN">301-ТН</option>
-            </select><br><br>
+                    <label>Навчальна група</label>
+                    <select name="group">
+                        <option value="302-TN">302-ТН</option>
+                        <option value="301-TN">301-ТН</option>
+                    </select>
 
-            <label>Пароль:</label><br>
-            <input type="password" name="pass"><br><br>
+                    <label>Пароль</label>
+                    <input type="password" name="pass">
 
-            <label>Підтвердження паролю:</label><br>
-            <input type="password" name="pass_confirm"><br><br>
+                    <label>Підтвердження паролю</label>
+                    <input type="password" name="pass_confirm">
 
-            <button type="submit">Зареєструватись</button>
-        
-        </form> </div>
+                    <div style="overflow: hidden; margin-top: 10px;">
+                        <button type="submit">Зареєструватись</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; Всі права захищені.<br>
+        Розробник: студент групи 302-ТН Сухарєв Максим
+    </footer>
+
 </body>
 </html>
