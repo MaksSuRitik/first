@@ -30,3 +30,5 @@ https://makssuritik.github.io/first/lb10/SuharevLab10-float.htm
 https://makssuritik.github.io/first/lb10/SuharevLab10-grid.htm
 11 лаба
 https://makssuritik.github.io/first/lb11/SuharevLab11-1.htm
+12 лаба
+https://makssuritik.github.io/first/lb12/SuharevLab10-flex.htm 
