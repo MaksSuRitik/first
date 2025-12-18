@@ -34,3 +34,6 @@ https://makssuritik.github.io/first/lb11/SuharevLab11-1.htm
 https://makssuritik.github.io/first/lb12/SuharevLab10-flex.htm 
 13 лаба
 https://makssuritik.github.io/first/lb13/app/index.html
+14 лаба
+https://makssuritik.github.io/first/lb14/index.html
+https://makssuritik.github.io/first/lb14/index2.html
